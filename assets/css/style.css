@@ -15,28 +15,30 @@ h2 {
 	text-align: center;
 }
 
-#mainArea {
+.mainArea {
 	height: 500px;
 	width: 100%;
+	margin-top: 50px;
 }
 
-#questionSpace {
+.questionSpace {
 	height: 400px;
-	width: 500px;
+	width: 45%;
 	border: 5px solid red;
 	margin-left: 50px;
-	position: relative;
-}
-
-
-
-#answerSpace {
-	height: 400px;
-	width: 500px;
-	border: 5px solid red;
-	margin-left: 50px;
-	float: left;
-	position: absolute;
 	
+}
 
+.choicesSpace {
+	height: 400px;
+	width: 45%;
+	border: 5px solid red;
+	margin-left: 50px;
+	position: right;
+	
+}
+
+.show-number {
+	color: green;
+	font-size: 50px;
 }
