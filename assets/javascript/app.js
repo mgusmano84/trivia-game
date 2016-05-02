@@ -1,27 +1,33 @@
 $(document).ready(function () {
 
-	var game = {
-
-		timer: 30,
+	
+	// function start(){
+	// 	$(".mainArea").hide;
+	// 	$(".mainArea").html("<h1>Click Here to Start</h1>")
 		
+	// }
 
-	    run: function (){
-	      var counter = setInterval(dec, 1000);
-	    },
 
-	    dec: function (){
-	      game.timer--;
-	      $('#show-number').html('<h2>' + timer + '</h2>');
-	      if (game.timer === 0){
-	        stop();}
-	    },
 
-	    stop: function (){
-	      clearInterval(counter);
-	    },
 
-	   
-	};
 
-	game.run();
+	//Timer
+	var timer = 120;
+    function run(){
+      counter = setInterval(decrement, 1000);
+    }
+    function decrement(){
+      timer--;
+      $('#show-number').html('<h2>' + timer + " " + "Seconds" + '</h2>');
+      if (timer === 0){
+        stop()}
+    }
+	function stop(){
+      clearInterval(counter);
+    }
+
+	// run();
+	//End Timer
+
+	start();
 });
