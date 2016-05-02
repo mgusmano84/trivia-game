@@ -1,12 +1,16 @@
 $(document).ready(function () {
 
 	
-	// function start(){
-	// 	$(".mainArea").hide;
-	// 	$(".mainArea").html("<h1>Click Here to Start</h1>")
-		
-	// }
+	
 
+
+
+	//start button
+	$('.start').click(function() {
+	   	run();
+	    // question();
+	    $('.start').hide();
+	});
 
 
 
@@ -29,5 +33,15 @@ $(document).ready(function () {
 	// run();
 	//End Timer
 
-	start();
+	
 });
+
+
+// function start(){
+	// 	$(".mainArea").hide;
+	// 	$(".mainArea").html("<h1>Click Here to Start</h1>")
+
+	// }
+
+
+	// start();
