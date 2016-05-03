@@ -1,19 +1,26 @@
 $(document).ready(function () {
 
 	
-	
+	var questions = [
+		{question: "Who is Mario\' counterpart?",
+	    correct: "Luigi",
+	    option1: "Bowser",
+	    option2: "Toad"},
+
+	    {question: "Who is the name of the hero that must save Zelda?",
+	    option1: "Mario",
+	    correct: "Link",
+	    option2: "Donkey Kong"},
+		]
 
 
 
 	//start button
 	$('.start').click(function() {
 	   	run();
-	    // question();
+	    // questionAppear();
 	    $('.start').hide();
 	});
-
-
-
 
 	//Timer
 	var timer = 120;
@@ -32,6 +39,10 @@ $(document).ready(function () {
 
 	// run();
 	//End Timer
+
+	function questionAppear(){
+
+	}
 
 	
 });
