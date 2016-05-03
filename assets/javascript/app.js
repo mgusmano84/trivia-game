@@ -1,35 +1,42 @@
 $(document).ready(function () {
 
+	//Audio Starts
+	var audio = new Audio('assets/music/castle.mp3');
+    audio.play();
+
+	var right = 0;
+	var wrong = 0;
 	var count = 0;
 
+	//Questions Array
 	var questions = [
 		{question: "Who is Mario\'s counterpart?",
-	    correct: "Luigi",
+	    correctMain: "Luigi",
 	    option1: "Bowser",
 	    option2: "Toad"},
 
 	    {question: "Who is the name of the hero that must save Zelda?",
 	    option1: "Mario",
-	    correct: "Link",
+	    correctMain: "Link",
 	    option2: "Donkey Kong"},
 
 	   	{question: "What year did the Nintendo Entertainment System come out?",
 	    option1: "1981",
-	    correct: "1983",
+	    correctMain: "1983",
 	    option2: "1984"},
 
 	    {question: "What system did Ocarina of Time premier on?",
 	    option1: "Super Nintendo",
-	    correct: "Nintendo 64",
+	    correctMain: "Nintendo 64",
 	    option2: "Nintendo Wii"},
 
 	    {question: "Who is Link\s archrival?",
 	    option1: "Bowser",
 	    option2: "Goomba",
-	    correct: "Ganondorf"},
+	    correctMain: "Ganondorf"},
 
 	    {question: "In what game do Nintendo favorites hash in out in endless battles?",
-	    correct: "Smash Bros",
+	    correctMain: "Smash Bros",
 	    option1: "Nitendo Fighters",
 	    option2: "Street Fighter"},
 		];
@@ -58,8 +65,6 @@ $(document).ready(function () {
       clearInterval(counter);
     }
 
-
-
 	// run();
 	//End Timer
 
@@ -68,8 +73,28 @@ $(document).ready(function () {
 	 $('.choices').html("<li><input type='radio' name='optradio'>" + " " +
         questions[count].option1 + "</li><li><input type='radio' name='optradio'>" +  " " +
         questions[count].option2 + "</li><li><input type='radio' name='optradio' value='correct'>" + " " +
-        questions[count].correct + "</li>");
+        questions[count].correctMain + "</li>");
 	}
+
+	$('.choices').on('change', function() {
+	   if($('input[name=optradio]:checked', '.choices').val() == 'correct') {
+	    right ++;
+	   } else {
+	    wrong ++;
+	   }; 
+	   count ++;
+
+	   if(counter == questions.length) {
+        stop();
+        $('#time').html("<h3>Game Over</h3>");}
+           
+	   else {
+	   questionAppear();}
+	});
+
+
+
+
 
 		
 
