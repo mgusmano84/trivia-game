@@ -42,8 +42,7 @@ $(document).ready(function () {
 		];
 
 
-
-	//start button
+	//Start Button
 	$('.start').click(function() {
 	   	run();
 	    questionAppear();
@@ -64,7 +63,6 @@ $(document).ready(function () {
 	function stop(){
       clearInterval(counter);
     }
-
 	// run();
 	//End Timer
 
@@ -85,12 +83,16 @@ $(document).ready(function () {
 	   count ++;
 
 	   if(counter == questions.length) {
-        stop();
-        $('#time').html("<h3>Game Over</h3>");}
+       stop();
+       summary();}
            
 	   else {
 	   questionAppear();}
 	});
+
+	function summary (){
+		 $('.questions').html
+	}
 
 
 
