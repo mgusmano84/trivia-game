@@ -67,11 +67,15 @@ $(document).ready(function () {
 	//End Timer
 
 	function questionAppear(){
-	 $('.questions').html(questions[count].question);
-	 $('.choices').html("<li><input type='radio' name='optradio'>" + " " +
-        questions[count].option1 + "</li><li><input type='radio' name='optradio'>" +  " " +
-        questions[count].option2 + "</li><li><input type='radio' name='optradio' value='correct'>" + " " +
-        questions[count].correctMain + "</li>");
+		 $('.questions').html(questions[count].question);
+		 $('.choices').html("<li><input type='radio' name='optradio'>" + " " +
+	        questions[count].option1 + "</li><li><input type='radio' name='optradio'>" +  " " +
+	        questions[count].option2 + "</li><li><input type='radio' name='optradio' value='correct'>" + " " +
+	        questions[count].correctMain + "</li>");
+	}
+
+	function summary (){
+		$('.questions').html.right;
 	}
 
 	$('.choices').on('change', function() {
@@ -84,15 +88,14 @@ $(document).ready(function () {
 
 	   if(counter == questions.length) {
        stop();
-       summary();}
+	       // summary();}
+	   }
            
 	   else {
 	   questionAppear();}
 	});
 
-	function summary (){
-		 $('.questions').html
-	}
+
 
 
 
