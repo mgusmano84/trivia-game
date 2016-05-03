@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
-	
+	var count = 0;
+
 	var questions = [
 		{question: "Who is Mario\' counterpart?",
 	    correct: "Luigi",
@@ -11,14 +12,34 @@ $(document).ready(function () {
 	    option1: "Mario",
 	    correct: "Link",
 	    option2: "Donkey Kong"},
-		]
+
+	   	{question: "What year did the Nintendo Entertainment System come out?",
+	    option1: "1981",
+	    correct: "1983",
+	    option2: "1984"},
+
+	    {question: "What year did the Nintendo Entertainment System come out?",
+	    option1: "1981",
+	    correct: "1983",
+	    option2: "1984"},
+
+	    {question: "What year did the Nintendo Entertainment System come out?",
+	    option1: "1981",
+	    correct: "1983",
+	    option2: "1984"},
+
+	    {question: "What year did the Nintendo Entertainment System come out?",
+	    option1: "1981",
+	    correct: "1983",
+	    option2: "1984"},
+		];
 
 
 
 	//start button
 	$('.start').click(function() {
 	   	run();
-	    // questionAppear();
+	    questionAppear();
 	    $('.start').hide();
 	});
 
@@ -37,12 +58,20 @@ $(document).ready(function () {
       clearInterval(counter);
     }
 
+
+
 	// run();
 	//End Timer
 
 	function questionAppear(){
-
+	 $('.questions').html(questions[count].question);
+	 $('.choices').html("<li><input type='radio' name='optradio'>" + " " +
+        questions[count].option1 + "</li><li><input type='radio' name='optradio'>" +  " " +
+        questions[count].option2 + "</li><li><input type='radio' name='optradio' value='correct'>" + " " +
+        questions[count].correct + "</li>");
 	}
+
+		
 
 	
 });
