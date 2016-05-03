@@ -3,7 +3,7 @@ $(document).ready(function () {
 	var count = 0;
 
 	var questions = [
-		{question: "Who is Mario\' counterpart?",
+		{question: "Who is Mario\'s counterpart?",
 	    correct: "Luigi",
 	    option1: "Bowser",
 	    option2: "Toad"},
@@ -18,20 +18,20 @@ $(document).ready(function () {
 	    correct: "1983",
 	    option2: "1984"},
 
-	    {question: "What year did the Nintendo Entertainment System come out?",
-	    option1: "1981",
-	    correct: "1983",
-	    option2: "1984"},
+	    {question: "What system did Ocarina of Time premier on?",
+	    option1: "Super Nintendo",
+	    correct: "Nintendo 64",
+	    option2: "Nintendo Wii"},
 
-	    {question: "What year did the Nintendo Entertainment System come out?",
-	    option1: "1981",
-	    correct: "1983",
-	    option2: "1984"},
+	    {question: "Who is Link\s archrival?",
+	    option1: "Bowser",
+	    option2: "Goomba",
+	    correct: "Ganondorf"},
 
-	    {question: "What year did the Nintendo Entertainment System come out?",
-	    option1: "1981",
-	    correct: "1983",
-	    option2: "1984"},
+	    {question: "In what game do Nintendo favorites hash in out in endless battles?",
+	    correct: "Smash Bros",
+	    option1: "Nitendo Fighters",
+	    option2: "Street Fighter"},
 		];
 
 
