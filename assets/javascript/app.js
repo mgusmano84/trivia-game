@@ -68,10 +68,10 @@ $(document).ready(function () {
 
 	function questionAppear(){
 		 $('.questions').html(questions[count].question);
-		 $('.choices').html("<li><input type='radio' name='optradio'>" + " " +
-	        questions[count].option1 + "</li><li><input type='radio' name='optradio'>" +  " " +
-	        questions[count].option2 + "</li><li><input type='radio' name='optradio' value='correct'>" + " " +
-	        questions[count].correctMain + "</li>");
+		 $('.choices').html("<input type='radio' name='optradio'>" + " " + 
+	        questions[count].option1 + "<br>" + "<input type='radio' name='optradio'>" +  " " +
+	        questions[count].option2 + "<br>" + "<input type='radio' name='optradio' value='correct'>" + " " +
+	        questions[count].correctMain + "");
 	}
 
 	function summary (){
