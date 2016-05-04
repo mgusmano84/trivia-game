@@ -1,6 +1,6 @@
 #container {
 	background-image: url("../images/mario3.jpg");
-	height: 600px;
+	height: 700px;
 }
 
 h1 {
@@ -51,4 +51,15 @@ h2 {
 .choices {
 	font-size: 40px;
 	color: white;
+}
+
+.start { position: absolute;
+	right: 47%;
+}
+
+h3 {
+	font-family: "Unica One";
+	color: white;
+	font-size: 28px;
+	text-align: center;
 }
