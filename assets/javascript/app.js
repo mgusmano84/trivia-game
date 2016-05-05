@@ -53,31 +53,28 @@ $(document).ready(function () {
 	var timer = 120;
     function run(){
       counter = setInterval(decrement, 1000);
-    }
+    };
     function decrement(){
       timer--;
       $('#show-number').html('<h2>' + timer + " " + "Seconds" + '</h2>');
       if (timer === 0){
         stop()}
-    }
+    };
 	function stop(){
       clearInterval(counter);
-    }
+    };
 	// run();
 	//End Timer
 
 	function questionAppear(){
 		 $('.questions').html(questions[count].question);
-		 $('.choices').html("<input type='radio' name='optradio'>" + " " + 
-	        questions[count].option1 + "<br>" + "<input type='radio' name='optradio'>" +  " " +
-	        questions[count].option2 + "<br>" + "<input type='radio' name='optradio' value='correct'>" + " " +
-	        questions[count].correctMain + "");
-	}
+		 $('.choices').html(
+		 	"<input type='radio' name='optradio'>" + " " + questions[count].option1 + "<br>" + 
+		 	"<input type='radio' name='optradio'>" +  " " + questions[count].option2 + "<br>" + 
+		 	"<input type='radio' name='optradio' value='correct'>" + " " + questions[count].correctMain + "");
+	};
 
-	function summary (){
-		$('.questions').html.right;
-	}
-
+	//Choice selction function
 	$('.choices').on('change', function() {
 	   if($('input[name=optradio]:checked', '.choices').val() == 'correct') {
 	    right ++;
@@ -86,22 +83,24 @@ $(document).ready(function () {
 	   }; 
 	   count ++;
 
-	   if(counter == questions.length) {
+	   if(count == questions.length) {
        stop();
-	       // summary();}
-	   }
-           
+	   summary();}
+	       
 	   else {
 	   questionAppear();}
 	});
 
-
-
-
-
-
-
-		
+	//if timer ends
+	if (timer == 0) {
+		summary();
+	};
+	//end results
+	function summary (){
+		$(".questions").hide();
+		$(".choices").hide();
+		$('.sum').html("<h3>Questions Right: " + right + "</h3><br>" + "<h3>Questions Wrong: " + wrong +"</h3>");
+	};
 
 	
 });
