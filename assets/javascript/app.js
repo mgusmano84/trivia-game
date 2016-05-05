@@ -47,10 +47,11 @@ $(document).ready(function () {
 	   	run();
 	    questionAppear();
 	    $('.start').hide();
+	    timecheck();
 	});
 
 	//Timer
-	var timer = 120;
+	var timer = 60;
     function run(){
       counter = setInterval(decrement, 1000);
     };
@@ -77,24 +78,32 @@ $(document).ready(function () {
 	//Choice selction function
 	$('.choices').on('change', function() {
 	   if($('input[name=optradio]:checked', '.choices').val() == 'correct') {
-	    right ++;
-	   } else {
-	    wrong ++;
-	   }; 
+	    right ++;}
+	   else {
+	    wrong ++;}; 
 	   count ++;
 
 	   if(count == questions.length) {
        stop();
-	   summary();}
+	   summary();
+	   $('#show-number').html("<h1></h1>");
+	}
 	       
 	   else {
 	   questionAppear();}
 	});
 
 	//if timer ends
-	if (timer == 0) {
-		summary();
+	function timecheck(){
+		if (timer === 0) {
+			stop();
+			summary();
+			 $('#show-number').html("<h1></h1>");
+		};
+		// else {run()};
 	};
+
+
 	//end results
 	function summary (){
 		$(".questions").hide();
